@@ -1,0 +1,10 @@
+var router = require("express").Router();
+var scrapeRoutes = require("./scrape");
+var noteRoutes = require("./notes");
+var articlesRoutes = require("./articles");
+var deleteRoutes = require("./delete");
+router.use("/scrape", scrapeRoutes);
+router.use("/notes", noteRoutes);
+router.use("/articles", articlesRoutes);
+router.use("/delete", deleteRoutes);
+module.exports = router;
