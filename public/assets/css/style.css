@@ -13,7 +13,7 @@ button {
 
 a {
 	text-decoration: none;
-	color: #fff;
+	color: blue;
 }
 
 header form {
@@ -42,7 +42,7 @@ header button {
 }
 
 #all-articles {
-	background-color: #999;
+	background-color: #0000;
 }
 
 #saved-articles {
