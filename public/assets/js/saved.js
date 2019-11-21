@@ -120,7 +120,7 @@ $(document).ready(function() {
         .val()
         .trim();
       if (newNote) {
-        noteData = { _headlineId: $(this).data("article")._id, noteText: newNote };
+        noteData = { _articleId: $(this).data("article")._id, noteText: newNote };
         $.post("/api/notes/", noteData).then(function() {
           bootbox.hideAll();
         });
