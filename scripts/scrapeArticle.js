@@ -1,20 +1,20 @@
 var axios = require("axios");
 var cheerio = require("cheerio");
 var scrape = function() {
-  return axios.get("http://www.nytimes.com").then(function(res) {
+  return axios.get("https://www.itworld.com/news/").then(function(res) {
     var $ = cheerio.load(res.data);
     console.log("article scraping");
     var articles = [];
-    $(".assetWrapper").each(function(i, element) {
+    $(".post-cont").each(function(i, element) {
       var head = $(this)
-        .find("h2")
+        .find("h3")
         .text()
         .trim();
       var url = $(this)
         .find("a")
         .attr("href");
       var sum = $(this)
-        .find("p")
+        .find("h4")
         .text()
         .trim();
       if (head && sum && url) {
@@ -23,7 +23,7 @@ var scrape = function() {
         var dataToAdd = {
           headline: headNeat,
           summary: sumNeat,
-          url: "https://www.nytimes.com" + url
+          url: "https://www.itworld.com/news/" + url
         };
         articles.push(dataToAdd);
       }
