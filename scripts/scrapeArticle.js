@@ -23,7 +23,7 @@ var scrape = function() {
         var dataToAdd = {
           headline: headNeat,
           summary: sumNeat,
-          url: "https://www.itworld.com/news" + url
+          url: "https://www.itworld.com" + url
         };
         articles.push(dataToAdd);
       }
